@@ -42,5 +42,4 @@ struct ColorTheme {
     let taxes = Color("taxes")
     let transport = Color("transport")
     let labels = Color("labels")
-
 }

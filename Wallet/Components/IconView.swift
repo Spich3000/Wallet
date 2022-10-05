@@ -20,7 +20,7 @@ struct IconView: View {
                 .scaledToFill()
                 .frame(width: 59.48, height: 59.48)
                 .background(icon.color)
-                .cornerRadius(10)
+                .cornerRadius(30)
         } else if icon.image == "hacs" {
             Image(systemName: "house")
                 .overlay(
@@ -29,22 +29,24 @@ struct IconView: View {
                         .scaledToFit()
                         .frame(width: 9, height: 9)
                         .background(icon.color)
-                        .cornerRadius(35)
+                        .cornerRadius(25)
                         .offset(x: 7, y: 8))
                 .frame(width: 59.48, height: 59.48)
                 .background(icon.color)
-                .cornerRadius(10)
+                .cornerRadius(30)
         } else {
             Image(systemName: icon.image)
                 .frame(width: 59.48, height: 59.48)
                 .background(icon.color)
-                .cornerRadius(10)
+                .cornerRadius(30)
         }
     }
 }
 
 struct IconView_Previews: PreviewProvider {
     static var previews: some View {
-        IconView(icon: Categories.init(image: "cup.and.saucer", color: Color.theme.food))
+        IconView(icon: Categories.init(id: 1, name: "Food", image: "cup.and.saucer", color: Color.theme.food))
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }

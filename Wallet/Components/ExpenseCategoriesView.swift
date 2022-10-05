@@ -11,8 +11,12 @@ struct ExpenseCategoriesView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(CategoriesViewModel.shared.expenseCategories) { icon in
-                    IconView(icon: icon)
+                ForEach(CategoriesViewModel.shared.expenseCategories, id: \.id) { icon in
+                    VStack(spacing: 5.0) {
+                        IconView(icon: icon)
+                        Text(icon.name)
+                            .font(.caption2)
+                    }
                 }
             }
         }

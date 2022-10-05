@@ -9,46 +9,30 @@ import SwiftUI
 
 struct HomeView: View {
     
+    // MARK: PROPERTIES
+    @State var showingViewState: Int = 1
+    
     // MARK: BODY
     var body: some View {
         ZStack {
-            Color.theme.background.ignoresSafeArea()
-            ScrollView {
-                header
-                ChartView()
-                VStack {
-                    ButtonsView()
-                    ButtonsSelectedView()
-                    ExpenseCategoriesView()
-                    TotalExpensesView()
-                }
-                .background {
-                    backgroundRectangle
-                }
+            Color.theme.background
                 .ignoresSafeArea()
+            TabView(selection: $showingViewState) {
+                AddExpenseView().tag(0)
+                StatisticView().tag(1)
             }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .ignoresSafeArea()
         }
     }
 }
 
+// MARK: PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(ExpenseViewModel())
     }
 }
 
-// MARK: EXTENSIONS
-extension HomeView {
-    
-    private var header: some View {
-        Text("Expense comparison")
-            .foregroundColor(Color.theme.accent)
-    }
-    
-    private var backgroundRectangle: some View {
-        RoundedRectangle(cornerRadius: 15)
-            .frame(maxHeight: .infinity)
-            .foregroundColor(.white)
-    }
-    
-}
+

@@ -11,7 +11,11 @@ struct IncomeCategoriesView: View {
     var body: some View {
             HStack {
                 ForEach(CategoriesViewModel.shared.incomeCategories) { icon in
-                    IconView(icon: icon)
+                    VStack(spacing: 5.0) {
+                        IconView(icon: icon)
+                        Text(icon.name)
+                            .font(.caption2)
+                    }
                 }
         }
         .padding(.horizontal)

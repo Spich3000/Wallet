@@ -42,30 +42,32 @@ struct ChartView: View {
                         }
                         
                     }
-                    HStack {
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .frame(width: 200, height: 10)
-                            .rotationEffect(Angle(degrees: 90))
-                            .offset(x: 90, y: 20)
-                        //                                Spacer()
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .frame(width: 100, height: 10)
-                            .rotationEffect(Angle(degrees: 90))
-                            .offset(x: -35, y: 70)
-                        //                                Spacer()
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .frame(width: 150, height: 10)
-                            .rotationEffect(Angle(degrees: 90))
-                            .offset(x: -190, y: 45)
-                        //                                Spacer()
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .frame(width: 200, height: 10)
-                            .rotationEffect(Angle(degrees: 90))
-                            .offset(x: -362, y: 20)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
+                    VStack(alignment: .center) {
+                        HStack {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(width: 200, height: 10)
+                                .rotationEffect(Angle(degrees: 90))
+                                .offset(x: 90, y: 20)
+                            //                                Spacer()
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(width: 100, height: 10)
+                                .rotationEffect(Angle(degrees: 90))
+                                .offset(x: -35, y: 70)
+                            //                                Spacer()
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(width: 150, height: 10)
+                                .rotationEffect(Angle(degrees: 90))
+                                .offset(x: -190, y: 45)
+                            //                                Spacer()
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(width: 200, height: 10)
+                                .rotationEffect(Angle(degrees: 90))
+                                .offset(x: -362, y: 20)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
                     .foregroundColor(Color.theme.appliances)
+                    }
                 }
             }
             .padding(.bottom, 20)

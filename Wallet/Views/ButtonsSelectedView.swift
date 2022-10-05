@@ -16,7 +16,7 @@ struct ButtonsSelectedView: View {
         }
         .frame(height: 50)
         .frame(maxWidth: .infinity)
-        .background(Color.theme.accent).cornerRadius(12)
+        .background(Color.theme.accent).cornerRadius(30)
         .foregroundColor(Color.white)
         .padding(.horizontal)
     }

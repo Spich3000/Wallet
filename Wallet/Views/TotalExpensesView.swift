@@ -8,33 +8,30 @@
 import SwiftUI
 
 struct TotalExpensesView: View {
+    
     var body: some View {
-        Button {
-            
-        } label: {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Spent per year in this category")
-                        .font(.caption)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                HStack {
-                    Text("1 343 424 ₽")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.horizontal)
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Spent per year in this category")
+                    .font(.caption)
+                Spacer()
             }
+            .padding(.horizontal)
+            HStack {
+                Text("1 343 424 ₽")
+                    .bold()
+                Spacer()
+            }
+            .padding(.horizontal)
         }
         .frame(height: 55)
         .frame(maxWidth: .infinity)
-        .background(Color.theme.labels).cornerRadius(12)
+        .background(Color.theme.labels).cornerRadius(30)
         .foregroundColor(Color.black)
-        .padding()
-        
+        .padding(.horizontal)
     }
 }
+
 
 struct TotalExpensesView_Previews: PreviewProvider {
     static var previews: some View {

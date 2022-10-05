@@ -17,7 +17,7 @@ struct ButtonsView: View {
             }
             .frame(height: 55)
             .frame(maxWidth: .infinity)
-            .background(Color.theme.accent).cornerRadius(12)
+            .background(Color.theme.accent).cornerRadius(30)
             .foregroundColor(Color.white)
             
             Button {
@@ -27,7 +27,7 @@ struct ButtonsView: View {
             }
             .frame(height: 55)
             .frame(maxWidth: .infinity)
-            .background(Color.theme.labels).cornerRadius(12)
+            .background(Color.theme.labels).cornerRadius(30)
             .foregroundColor(Color.black)
             
             Button {
@@ -37,7 +37,7 @@ struct ButtonsView: View {
             }
             .frame(height: 55)
             .frame(maxWidth: .infinity)
-            .background(Color.theme.labels).cornerRadius(12).opacity(0.6)
+            .background(Color.theme.labels).cornerRadius(30)
             .foregroundColor(Color.black)
             
             Button {
@@ -47,7 +47,7 @@ struct ButtonsView: View {
             }
             .frame(height: 55)
             .frame(maxWidth: .infinity)
-            .background(Color.theme.labels).cornerRadius(12).opacity(0.6)
+            .background(Color.theme.labels).cornerRadius(30)
             .foregroundColor(Color.black)
             
         }

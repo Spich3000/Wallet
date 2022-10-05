@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct Categories: Identifiable {
-    let id = UUID()
+    let id: Int
+    let name: String
     let image: String
     let color: Color
 }
